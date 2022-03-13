@@ -1,0 +1,118 @@
+body {background: #C1AF8C;}
+
+.top {
+/* Top_bar */
+position: absolute;
+width: 1900px;
+height: 76px;
+left: 10px;
+top: 10px;
+
+background: #FFFFFF;
+box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 15px;   
+
+}
+
+.BBoxLeft{
+/* Techical */
+position: absolute;
+width: 945px;
+height: 535px;
+left: 10px;
+top: 96px;
+
+background: #FFFFFF;
+box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 15px;    
+}
+
+.BBoxLeftArea {
+/* Techical */
+position: absolute;
+width: 923px;
+height: 518px;
+left: 21px;
+top: 104px;
+
+background: #FFFFFF;
+border-radius: 15px;    
+}
+
+.BBoxRight{
+/* Financials */
+position: absolute;
+width: 945px;
+height: 535px;
+left: 965px;
+top: 96px;
+
+background: #FFFFFF;
+box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 15px;    
+}
+
+.BBoxRightArea{
+/* Techical */
+position: absolute;
+width: 923px;
+height: 518px;
+left: 976px;
+top: 104px;
+
+background: #FFFFFF;
+border-radius: 15px;
+}
+
+.SBoxLeft {
+/* Reserve */
+position: absolute;
+width: 626px;
+height: 429px;
+left: 10px;
+top: 641px;
+
+background: #FFFFFF;
+box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 15px;    
+}
+
+.SBoxMid {
+/* Active */
+position: absolute;
+width: 626px;
+height: 429px;
+left: 647px;
+top: 641px;
+
+background: #FFFFFF;
+box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 15px;    
+}
+
+.SBoxRight{
+/* Dividends */
+position: absolute;
+width: 626px;
+height: 429px;
+left: 1284px;
+top: 641px;
+
+background: #FFFFFF;
+box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 15px;    
+}
+
+/* Import from Beershire Bootstrap */
+/*--------------------------------------------------------------
+# Custom CSS
+----------------------------------------------------------------*/
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: 0px;
+  }
