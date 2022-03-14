@@ -1,4 +1,4 @@
-body {background: #C1AF8C;}
+body {background: #BDBDBD;}
 
 .top {
 /* Top_bar */
@@ -12,6 +12,18 @@ background: #FFFFFF;
 box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 15px;   
 
+}
+
+.topArea{
+/* Reserve */
+position: absolute;
+width: 1878px;
+height: 60px;
+left: 21px;
+top: 18px;
+
+background: #FFFFFF;
+border-radius: 15px;  
 }
 
 .BBoxLeft{
@@ -77,6 +89,18 @@ box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 15px;    
 }
 
+.SBoxLeftArea{
+  /* Reserve */
+position: absolute;
+width: 604px;
+height: 413px;
+left: 21px;
+top: 649px;
+
+background: #FFFFFF;
+border-radius: 15px;
+}
+
 .SBoxMid {
 /* Active */
 position: absolute;
@@ -88,6 +112,18 @@ top: 641px;
 background: #FFFFFF;
 box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 15px;    
+}
+
+.SBoxMidArea{
+/* Reserve */
+position: absolute;
+width: 604px;
+height: 413px;
+left: 658px;
+top: 649px;
+
+background: #FFFFFF;
+border-radius: 15px;  
 }
 
 .SBoxRight{
@@ -103,6 +139,18 @@ box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 15px;    
 }
 
+.SBoxRightArea{
+/* Reserve */
+position: absolute;
+width: 604px;
+height: 413px;
+left: 1295px;
+top: 649px;
+
+background: #FFFFFF;
+border-radius: 15px;  
+}
+
 /* Import from Beershire Bootstrap */
 /*--------------------------------------------------------------
 # Custom CSS
@@ -116,3 +164,5 @@ border-radius: 15px;
     margin-right: -15px;
     margin-left: 0px;
   }
+
+  
