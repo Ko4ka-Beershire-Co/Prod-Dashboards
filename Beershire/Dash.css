@@ -1,4 +1,16 @@
-body {background: #BDBDBD;}
+/*--------------------------------------------------------------
+# Light Theme
+----------------------------------------------------------------*/
+
+/* Color Vars */
+:root {
+  --white_light: #FFFFFF;
+  --grey_light: #BDBDBD;
+  --red_dark: #5A4C4C;
+  --black_dark: #2B2B2B;
+}
+
+body {background: var(--grey_light);}
 
 .top {
 /* Top_bar */
@@ -8,7 +20,7 @@ height: 76px;
 left: 10px;
 top: 10px;
 
-background: #FFFFFF;
+background: var(--white_light);
 box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 15px;   
 
@@ -22,7 +34,7 @@ height: 60px;
 left: 21px;
 top: 18px;
 
-background: #FFFFFF;
+background: transparent;
 border-radius: 15px;  
 }
 
@@ -34,7 +46,7 @@ height: 535px;
 left: 10px;
 top: 96px;
 
-background: #FFFFFF;
+background: var(--white_light);
 box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 15px;    
 }
@@ -47,7 +59,7 @@ height: 518px;
 left: 21px;
 top: 104px;
 
-background: #FFFFFF;
+background: transparent;
 border-radius: 15px;    
 }
 
@@ -59,7 +71,7 @@ height: 535px;
 left: 965px;
 top: 96px;
 
-background: #FFFFFF;
+background: var(--white_light);
 box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 15px;    
 }
@@ -72,7 +84,7 @@ height: 518px;
 left: 976px;
 top: 104px;
 
-background: #FFFFFF;
+background: transparent;
 border-radius: 15px;
 }
 
@@ -84,7 +96,7 @@ height: 429px;
 left: 10px;
 top: 641px;
 
-background: #FFFFFF;
+background: var(--white_light);
 box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 15px;    
 }
@@ -97,7 +109,7 @@ height: 413px;
 left: 21px;
 top: 649px;
 
-background: #FFFFFF;
+background: transparent;
 border-radius: 15px;
 }
 
@@ -109,7 +121,7 @@ height: 429px;
 left: 647px;
 top: 641px;
 
-background: #FFFFFF;
+background: var(--white_light);
 box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 15px;    
 }
@@ -122,7 +134,7 @@ height: 413px;
 left: 658px;
 top: 649px;
 
-background: #FFFFFF;
+background: transparent;
 border-radius: 15px;  
 }
 
@@ -134,7 +146,7 @@ height: 429px;
 left: 1284px;
 top: 641px;
 
-background: #FFFFFF;
+background: var(--white_light);
 box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 15px;    
 }
@@ -147,9 +159,41 @@ height: 413px;
 left: 1295px;
 top: 649px;
 
-background: #FFFFFF;
+background: transparent;
 border-radius: 15px;  
 }
+
+/* Buttons */
+
+.ButtonHistory{
+/* Rectangle 2 */
+position: absolute;
+width: 65px;
+height: 65px;
+left: 1765px;
+top: 16px;
+
+background: var(--grey_light);
+border-radius: 15px;
+}
+
+.ButtonHistory:focus { outline-style: none; }
+
+.ButtonColor{
+/* Rectangle 1 */
+
+
+position: absolute;
+width: 65px;
+height: 65px;
+left: 1839px;
+top: 16px;
+
+background: var(--grey_light);
+border-radius: 15px;  
+}
+
+.ButtonColor:focus { outline-style: none; }
 
 /* Import from Beershire Bootstrap */
 /*--------------------------------------------------------------
