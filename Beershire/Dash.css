@@ -177,7 +177,6 @@ background: var(--grey_light);
 border-radius: 15px;
 }
 
-.ButtonHistory:focus { outline-style: none; }
 
 .ButtonColor{
 /* Rectangle 1 */
@@ -193,7 +192,6 @@ background: var(--grey_light);
 border-radius: 15px;  
 }
 
-.ButtonColor:focus { outline-style: none; }
 
 /* Import from Beershire Bootstrap */
 /*--------------------------------------------------------------
