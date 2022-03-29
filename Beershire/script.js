@@ -2,6 +2,48 @@
 const n = 60 * 5;
 const switcher = document.querySelector('.ButtonColor');
 var i = 0
+// iframe links
+const dark_short_links = ["https://docs.google.com/spreadsheets/d/e/2PACX-1vR14XQRk4R6ga6BVzSnVdvVqTRzOpZOe47CrHSZQksAKOU5PhjouKfVhEmxMq8E0y4yRAG-WlBWC-ZS/pubchart?oid=169774953&amp;format=interactive",
+"https://docs.google.com/spreadsheets/d/e/2PACX-1vR14XQRk4R6ga6BVzSnVdvVqTRzOpZOe47CrHSZQksAKOU5PhjouKfVhEmxMq8E0y4yRAG-WlBWC-ZS/pubchart?oid=1875447996&amp;format=interactive",
+"https://docs.google.com/spreadsheets/d/e/2PACX-1vR14XQRk4R6ga6BVzSnVdvVqTRzOpZOe47CrHSZQksAKOU5PhjouKfVhEmxMq8E0y4yRAG-WlBWC-ZS/pubchart?oid=236014177&amp;format=interactive",
+"https://docs.google.com/spreadsheets/d/e/2PACX-1vR14XQRk4R6ga6BVzSnVdvVqTRzOpZOe47CrHSZQksAKOU5PhjouKfVhEmxMq8E0y4yRAG-WlBWC-ZS/pubchart?oid=2140973151&amp;format=interactive",
+"https://docs.google.com/spreadsheets/d/e/2PACX-1vR14XQRk4R6ga6BVzSnVdvVqTRzOpZOe47CrHSZQksAKOU5PhjouKfVhEmxMq8E0y4yRAG-WlBWC-ZS/pubchart?oid=1748461419&amp;format=interactive",
+"https://docs.google.com/spreadsheets/d/e/2PACX-1vR14XQRk4R6ga6BVzSnVdvVqTRzOpZOe47CrHSZQksAKOU5PhjouKfVhEmxMq8E0y4yRAG-WlBWC-ZS/pubchart?oid=1615243752&amp;format=interactive",
+"https://docs.google.com/spreadsheets/d/e/2PACX-1vR14XQRk4R6ga6BVzSnVdvVqTRzOpZOe47CrHSZQksAKOU5PhjouKfVhEmxMq8E0y4yRAG-WlBWC-ZS/pubchart?oid=1208141090&amp;format=interactive",
+"https://docs.google.com/spreadsheets/d/e/2PACX-1vR14XQRk4R6ga6BVzSnVdvVqTRzOpZOe47CrHSZQksAKOU5PhjouKfVhEmxMq8E0y4yRAG-WlBWC-ZS/pubchart?oid=1521776556&amp;format=interactive",
+"https://docs.google.com/spreadsheets/d/e/2PACX-1vR14XQRk4R6ga6BVzSnVdvVqTRzOpZOe47CrHSZQksAKOU5PhjouKfVhEmxMq8E0y4yRAG-WlBWC-ZS/pubchart?oid=626094903&amp;format=interactive",
+"https://docs.google.com/spreadsheets/d/e/2PACX-1vR14XQRk4R6ga6BVzSnVdvVqTRzOpZOe47CrHSZQksAKOU5PhjouKfVhEmxMq8E0y4yRAG-WlBWC-ZS/pubchart?oid=1958608144&amp;format=interactive",
+"https://docs.google.com/spreadsheets/d/e/2PACX-1vR14XQRk4R6ga6BVzSnVdvVqTRzOpZOe47CrHSZQksAKOU5PhjouKfVhEmxMq8E0y4yRAG-WlBWC-ZS/pubchart?oid=556863310&amp;format=interactive",
+"https://docs.google.com/spreadsheets/d/e/2PACX-1vR14XQRk4R6ga6BVzSnVdvVqTRzOpZOe47CrHSZQksAKOU5PhjouKfVhEmxMq8E0y4yRAG-WlBWC-ZS/pubchart?oid=464452970&amp;format=interactive",
+"https://docs.google.com/spreadsheets/d/e/2PACX-1vR14XQRk4R6ga6BVzSnVdvVqTRzOpZOe47CrHSZQksAKOU5PhjouKfVhEmxMq8E0y4yRAG-WlBWC-ZS/pubchart?oid=933713189&amp;format=interactive",
+"https://docs.google.com/spreadsheets/d/e/2PACX-1vR14XQRk4R6ga6BVzSnVdvVqTRzOpZOe47CrHSZQksAKOU5PhjouKfVhEmxMq8E0y4yRAG-WlBWC-ZS/pubchart?oid=2036398605&amp;format=interactive",
+"https://docs.google.com/spreadsheets/d/e/2PACX-1vR14XQRk4R6ga6BVzSnVdvVqTRzOpZOe47CrHSZQksAKOU5PhjouKfVhEmxMq8E0y4yRAG-WlBWC-ZS/pubchart?oid=1151239520&amp;format=interactive",
+"https://docs.google.com/spreadsheets/d/e/2PACX-1vR14XQRk4R6ga6BVzSnVdvVqTRzOpZOe47CrHSZQksAKOU5PhjouKfVhEmxMq8E0y4yRAG-WlBWC-ZS/pubchart?oid=5933387&amp;format=interactive",
+"https://docs.google.com/spreadsheets/d/e/2PACX-1vR14XQRk4R6ga6BVzSnVdvVqTRzOpZOe47CrHSZQksAKOU5PhjouKfVhEmxMq8E0y4yRAG-WlBWC-ZS/pubchart?oid=1217445004&amp;format=interactive",
+"https://docs.google.com/spreadsheets/d/e/2PACX-1vR14XQRk4R6ga6BVzSnVdvVqTRzOpZOe47CrHSZQksAKOU5PhjouKfVhEmxMq8E0y4yRAG-WlBWC-ZS/pubchart?oid=1133905235&amp;format=interactive"];
+
+const dark_short_ids = [
+'CurrentPosition',
+'RobotStatus',
+'Returns',
+'RobotVSOrganic',
+'StabilityReport',
+'Gauge1',
+'Gauge2',
+'Gauge3',
+'Gauge4',
+'Gauge5',
+'Gauge6',
+'WinLoss',
+'PieStatistics',
+'Waterfall',
+'PnL',
+'ReserveFundStats',
+'ActiveFund',
+'DividendFund'
+];
+
+
 
 // Containers
 const topArea = document.querySelector(".topArea");
@@ -10,6 +52,49 @@ const BBoxRightArea = document.querySelector(".BBoxRightArea");
 const SBoxLeftArea = document.querySelector(".SBoxLeftArea");
 const SBoxMidArea = document.querySelector(".SBoxMidArea");
 const SBoxRightArea = document.querySelector(".SBoxRightArea");
+
+// Change theme version 2.0
+
+function switchThemeNew(){
+  if(i==0){
+        // Change White Theme to Black
+        document.body.style.background = '#5A4C4C'
+        document.querySelector(".top").style.background = '#2B2B2B'
+        document.querySelector(".BBoxLeft").style.background = '#2B2B2B'
+        document.querySelector(".BBoxRight").style.background = '#2B2B2B'
+        document.querySelector(".SBoxLeft").style.background = '#2B2B2B'
+        document.querySelector(".SBoxMid").style.background = '#2B2B2B'
+        document.querySelector(".SBoxRight").style.background = '#2B2B2B'
+        document.querySelector(".ButtonHistory").style.background = '#5A4C4C'
+        document.querySelector(".ButtonColor").style.background = '#5A4C4C'
+        // Version 2.0
+        var n = 0
+        for (j in dark_short_ids){
+          console.log(dark_short_ids[n+1])
+          document.getElementById(dark_short_ids[n]).src = dark_short_links[n]
+          n += 1
+        }
+        i+=1 
+    }
+    else if (i==1){
+      // Change Black Theme to White
+      // MB just run a page-refresh
+      document.body.style.background = '#BDBDBD'
+      document.querySelector(".top").style.background = '#FFFFFF'
+      document.querySelector(".BBoxLeft").style.background = '#FFFFFF'
+      document.querySelector(".BBoxRight").style.background = '#FFFFFF'
+      document.querySelector(".SBoxLeft").style.background = '#FFFFFF'
+      document.querySelector(".SBoxMid").style.background = '#FFFFFF'
+      document.querySelector(".SBoxRight").style.background = '#FFFFFF'
+      document.querySelector(".ButtonHistory").style.background = '#BDBDBD'
+      document.querySelector(".ButtonColor").style.background = '#BDBDBD'
+      // Update iframes
+      window.location.href = window.location.href;
+      i -= 1
+    }
+
+  }
+
 
 // Change theme
 function switchTheme() {
@@ -66,6 +151,11 @@ function switchTheme() {
     window.location.href = window.location.href;
     i -= 1
   }
+}
+
+// Change theme
+function switchTimeframe() {
+
 }
 
 function updateStuff(stuff) {
