@@ -248,7 +248,56 @@ function switchTheme() {
 
 // Change theme
 function switchTimeframe() {
-
+  if(theme=="white" && timeframe == "short"){
+    // Version 2.0
+    var n = 0
+    for (j in dark_short_ids){
+      // console.log(dark_short_ids[n+1])
+      document.getElementById(dark_short_ids[n]).src = white_long_links[n]
+      n+=1
+    }
+    n=0
+    timeframe="long"
+}
+else if(theme=="dark" && timeframe == "short"){
+      // Version 2.0
+      var n = 0
+      for (j in dark_short_ids){
+        // console.log(dark_short_ids[n+1])
+        document.getElementById(dark_short_ids[n]).src = dark_long_links[n]
+        n+=1
+      }
+      n=0
+      timeframe="long"
+}
+else if(theme=="white" && timeframe == "long"){
+      // Version 2.0
+      var n = 0
+      for (j in dark_short_ids){
+        // console.log(dark_short_ids[n+1])
+        document.getElementById(dark_short_ids[n]).src = white_short_links[n]
+        n+=1
+      }
+      n=0
+      timeframe="short"
+}
+else if(theme=="dark" && timeframe == "long"){
+      // Version 2.0
+      var n = 0
+      for (j in dark_short_ids){
+        // console.log(dark_short_ids[n+1])
+        document.getElementById(dark_short_ids[n]).src = dark_short_links[n]
+        n+=1
+      }
+      n=0
+      timeframe="short"
+}
+else{
+   // Update iframes
+   window.location.href = window.location.href;
+   theme="white"
+   timeframe="short"
+}
 }
 
 function updateStuff(stuff) {
