@@ -10,12 +10,13 @@
   --black_dark: #2B2B2B;
 }
 
-body {background: var(--grey_light);}
+body {background: var(--grey_light);
+}
 
 .top {
 /* Top_bar */
 position: absolute;
-width: 1900px;
+width: 1897px;
 height: 76px;
 left: 10px;
 top: 10px;
@@ -168,10 +169,10 @@ border-radius: 15px;
 .ButtonHistory{
 /* Rectangle 2 */
 position: absolute;
-width: 65px;
-height: 65px;
-left: 1765px;
-top: 16px;
+width: 45px;
+height: 44px;
+left: 1788px;
+top: 26px;
 
 background: var(--grey_light);
 border-radius: 15px;
@@ -183,15 +184,42 @@ border-radius: 15px;
 
 
 position: absolute;
-width: 65px;
-height: 65px;
-left: 1839px;
-top: 16px;
+width: 45px;
+height: 44px;
+left: 1849px;
+top: 26px;
 
 background: var(--grey_light);
 border-radius: 15px;  
 }
 
+.AquariumSwitch{
+  /* Rectangle 3 */
+
+
+position: absolute;
+width: 45px;
+height: 44px;
+left: 1727px;
+top: 26px;
+
+background: #5A4C4C;
+border-radius: 15px;
+}
+
+/* Techical */
+
+.AquariumBody{
+position: absolute;
+width: 1895px;
+height: 964px;
+left: 10px;
+top: 96px;
+
+background: var(--black_dark);
+box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 15px;
+}
 
 /* Import from Beershire Bootstrap */
 /*--------------------------------------------------------------

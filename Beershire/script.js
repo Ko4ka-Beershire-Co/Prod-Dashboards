@@ -57,9 +57,9 @@ const dark_long_links = [
   "https://docs.google.com/spreadsheets/d/e/2PACX-1vR14XQRk4R6ga6BVzSnVdvVqTRzOpZOe47CrHSZQksAKOU5PhjouKfVhEmxMq8E0y4yRAG-WlBWC-ZS/pubchart?oid=186328755&format=interactive",
   "https://docs.google.com/spreadsheets/d/e/2PACX-1vR14XQRk4R6ga6BVzSnVdvVqTRzOpZOe47CrHSZQksAKOU5PhjouKfVhEmxMq8E0y4yRAG-WlBWC-ZS/pubchart?oid=1426496597&format=interactive",
   "https://docs.google.com/spreadsheets/d/e/2PACX-1vR14XQRk4R6ga6BVzSnVdvVqTRzOpZOe47CrHSZQksAKOU5PhjouKfVhEmxMq8E0y4yRAG-WlBWC-ZS/pubchart?oid=1497045533&format=interactive",
-  "https://docs.google.com/spreadsheets/d/e/2PACX-1vR14XQRk4R6ga6BVzSnVdvVqTRzOpZOe47CrHSZQksAKOU5PhjouKfVhEmxMq8E0y4yRAG-WlBWC-ZS/pubchart?oid=1497045533&format=interactive",
+  "https://docs.google.com/spreadsheets/d/e/2PACX-1vR14XQRk4R6ga6BVzSnVdvVqTRzOpZOe47CrHSZQksAKOU5PhjouKfVhEmxMq8E0y4yRAG-WlBWC-ZS/pubchart?oid=1834465940&format=interactive",
   "https://docs.google.com/spreadsheets/d/e/2PACX-1vR14XQRk4R6ga6BVzSnVdvVqTRzOpZOe47CrHSZQksAKOU5PhjouKfVhEmxMq8E0y4yRAG-WlBWC-ZS/pubchart?oid=849298539&format=interactive",
-  "https://docs.google.com/spreadsheets/d/e/2PACX-1vR14XQRk4R6ga6BVzSnVdvVqTRzOpZOe47CrHSZQksAKOU5PhjouKfVhEmxMq8E0y4yRAG-WlBWC-ZS/pubchart?oid=849298539&format=interactive",
+  "https://docs.google.com/spreadsheets/d/e/2PACX-1vR14XQRk4R6ga6BVzSnVdvVqTRzOpZOe47CrHSZQksAKOU5PhjouKfVhEmxMq8E0y4yRAG-WlBWC-ZS/pubchart?oid=875626329&format=interactive",
   "https://docs.google.com/spreadsheets/d/e/2PACX-1vR14XQRk4R6ga6BVzSnVdvVqTRzOpZOe47CrHSZQksAKOU5PhjouKfVhEmxMq8E0y4yRAG-WlBWC-ZS/pubchart?oid=797857331&format=interactive",
   "https://docs.google.com/spreadsheets/d/e/2PACX-1vR14XQRk4R6ga6BVzSnVdvVqTRzOpZOe47CrHSZQksAKOU5PhjouKfVhEmxMq8E0y4yRAG-WlBWC-ZS/pubchart?oid=385539300&format=interactive",
   "https://docs.google.com/spreadsheets/d/e/2PACX-1vR14XQRk4R6ga6BVzSnVdvVqTRzOpZOe47CrHSZQksAKOU5PhjouKfVhEmxMq8E0y4yRAG-WlBWC-ZS/pubchart?oid=988823980&format=interactive",
@@ -95,6 +95,7 @@ const BBoxRightArea = document.querySelector(".BBoxRightArea");
 const SBoxLeftArea = document.querySelector(".SBoxLeftArea");
 const SBoxMidArea = document.querySelector(".SBoxMidArea");
 const SBoxRightArea = document.querySelector(".SBoxRightArea");
+const AquariumBody = document.querySelector(".AquariumBody");
 
 // Change theme version 2.0
 
@@ -306,6 +307,10 @@ function updateStuff(stuff) {
   stuff.innerHTML = oldHTML;
 }
 
+function goToAquarium(){
+  window.location.href = "./aquarium.html";
+}
+
 setInterval(() => {
   updateStuff(topArea);
   updateStuff(BBoxLeftArea);
@@ -313,4 +318,9 @@ setInterval(() => {
   updateStuff(SBoxLeftArea);
   updateStuff(SBoxMidArea);
   updateStuff(SBoxRightArea);
+  updateStuff(AquariumBody);
 }, n * 1000);
+
+function TestPage() {
+  window.location.href = "file:///C:/Users/Alex/Desktop/Dashboard.Beershire/Trio101/index.html";
+}
