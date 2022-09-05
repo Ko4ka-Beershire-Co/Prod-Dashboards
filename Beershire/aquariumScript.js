@@ -5,10 +5,13 @@ var theme = "white" // | "dark"
 var timeframe = "short" // | "long"
 
 
-function updateStuff(stuff) {
-    const oldHTML = stuff.innerHTML;
-    stuff.innerHTML = "";
-    stuff.innerHTML = oldHTML;
+function updateStuff([stuff]) {
+    for (const item in stuff)
+    {
+      const oldHTML = stuff.item.innerHTML;
+      stuff.item.innerHTML = "";
+      stuff.item.innerHTML = oldHTML;
+    }
   }
 
   // Containers
@@ -23,7 +26,7 @@ function updateStuff(stuff) {
   // Change theme version 2.0
 
 setInterval(() => {
-  updateStuff(AquariumBody);
+  updateStuff([AquariumBody, topArea]);
 }, n * 1000);  
 
   function switchThemeNew(){
@@ -117,5 +120,5 @@ setInterval(() => {
     }
 
 setInterval(() => {
-    updateStuff(AquariumBody);
+    updateStuff([AquariumBody, topArea]);
   }, n * 1000);
