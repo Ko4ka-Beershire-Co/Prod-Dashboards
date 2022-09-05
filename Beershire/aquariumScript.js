@@ -5,14 +5,14 @@ var theme = "white" // | "dark"
 var timeframe = "short" // | "long"
 
 
-function updateStuff([stuff]) {
-    for (const item in stuff)
+function updateStuff(stuff) {
+    for (const counter in stuff)
     {
-      const oldHTML = stuff.item.innerHTML;
-      stuff.item.innerHTML = "";
-      stuff.item.innerHTML = oldHTML;
+      const oldHTML = stuff[counter].innerHTML;
+      stuff[counter].innerHTML = "";
+      stuff[counter].innerHTML = oldHTML;
     }
-  }
+  };
 
   // Containers
   const topArea = document.querySelector(".topArea");
@@ -22,11 +22,12 @@ function updateStuff([stuff]) {
   const SBoxMidArea = document.querySelector(".SBoxMidArea");
   const SBoxRightArea = document.querySelector(".SBoxRightArea");
   const AquariumBody = document.querySelector(".AquariumBody");
-  
+  const ar_elements = [AquariumBody, topArea];
   // Change theme version 2.0
 
+
 setInterval(() => {
-  updateStuff([AquariumBody, topArea]);
+  updateStuff(ar_elements);
 }, n * 1000);  
 
   function switchThemeNew(){
@@ -120,5 +121,5 @@ setInterval(() => {
     }
 
 setInterval(() => {
-    updateStuff([AquariumBody, topArea]);
+    updateStuff({AquariumBody, topArea});
   }, n * 1000);
