@@ -1,5 +1,5 @@
 // Loading true
-let db = 0
+let db = 0;
 
 const dat = fetch(
   "https://opensheet.elk.sh/14ePg5bfMRZpy7tQZCI2K8CXreXBN97BkDYTj8nedYH4/API-out-stats"
@@ -7,17 +7,36 @@ const dat = fetch(
   .then((response) => response.json())
   .then((data) => {
     const final_data_2 = data;
-    document.getElementById("organic").innerHTML = final_data_2[0]['Organic'];
-    document.getElementById("Lancelot 2.7").innerHTML = final_data_2[0]['Lancelot 2.7'];
-    document.getElementById("Hesoyam 0.7b").innerHTML = final_data_2[0]['Hesoyam 0.7b'];
-    document.getElementById("Hesoyam I").innerHTML = final_data_2[0]['Hesoyam I'];
-    document.getElementById("HYM LSTM+").innerHTML = final_data_2[0]['HYM LSTM+'];
-    document.getElementById("HYM LSTM-").innerHTML = final_data_2[0]['HYM LSTM-'];
-    document.getElementById("HYM LSTM-").innerHTML = final_data_2[0]['HYM LSTM-'];
+    document.getElementById("organic").innerHTML = final_data_2[0]["Organic"];
+    document.getElementById("Lancelot 2.7").innerHTML =
+      final_data_2[0]["Lancelot 2.7"];
+    document.getElementById("Hesoyam 0.7b").innerHTML =
+      final_data_2[0]["Hesoyam 0.7b"];
+    document.getElementById("Hesoyam I").innerHTML =
+      final_data_2[0]["Hesoyam I"];
+    document.getElementById("HYM LSTM+").innerHTML =
+      final_data_2[0]["HYM LSTM+"];
+    document.getElementById("HYM LSTM-").innerHTML =
+      final_data_2[0]["HYM LSTM-"];
+    document.getElementById("HYM LSTM-").innerHTML =
+      final_data_2[0]["HYM LSTM-"];
 
-    db = final_data_2[0]['Database']
-  }
-  )
+    db = final_data_2[0]["Database"];
+
+    const cardDataArr = document.querySelectorAll(".card-data");
+    cardDataArr.forEach((cardData) => {
+      // if(Number(cardData.textContent) > )
+      const data = cardData.textContent;
+
+      console.log("card data: ", Number(data.substring(0, data.indexOf("%"))));
+
+      if (Number(data.substring(0, data.indexOf("%"))) > 0) {
+        cardData.classList.add("redColor");
+      } else if (Number(data.substring(0, data.indexOf("%"))) < 0) {
+        cardData.classList.add("greenColor");
+      }
+    });
+  });
 
 const res = fetch(
   "https://opensheet.elk.sh/14ePg5bfMRZpy7tQZCI2K8CXreXBN97BkDYTj8nedYH4/API-out"
@@ -356,7 +375,14 @@ const res = fetch(
           bottom: 0,
         },
       },
-      colors: ['#a2a3a5', '#ad4d38', '#ecb45e', '#4bbea0','#c5b785', '#d7e4de'], //Edit Colors Here
+      colors: [
+        "#a2a3a5",
+        "#ad4d38",
+        "#ecb45e",
+        "#4bbea0",
+        "#c5b785",
+        "#d7e4de",
+      ], //Edit Colors Here
       labels: Date_Time,
       xaxis: {
         tooltip: {
@@ -406,7 +432,7 @@ const res = fetch(
         },
         {
           name: "Total Space",
-          data: [10000-db],
+          data: [10000 - db],
         },
       ],
       xaxis: {
@@ -417,7 +443,7 @@ const res = fetch(
       fill: {
         opacity: 1,
       },
-      colors: ['#f0b64d', '#4ead98'], //Edit Colors Here
+      colors: ["#f0b64d", "#4ead98"], //Edit Colors Here
       legend: {
         position: "top",
         horizontalAlign: "left",
