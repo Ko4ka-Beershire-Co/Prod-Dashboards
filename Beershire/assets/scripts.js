@@ -412,6 +412,7 @@ const res = fetch(
       xaxis: {
         categories: ["Data Base"],
         max: 10000,
+        tickAmount: 4,
       },
       fill: {
         opacity: 1,
