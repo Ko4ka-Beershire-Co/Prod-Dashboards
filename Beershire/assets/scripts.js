@@ -1,4 +1,23 @@
 // Loading true
+let db = 0
+
+const dat = fetch(
+  "https://opensheet.elk.sh/14ePg5bfMRZpy7tQZCI2K8CXreXBN97BkDYTj8nedYH4/API-out-stats"
+)
+  .then((response) => response.json())
+  .then((data) => {
+    const final_data_2 = data;
+    document.getElementById("organic").innerHTML = final_data_2[0]['Organic'];
+    document.getElementById("Lancelot 2.7").innerHTML = final_data_2[0]['Lancelot 2.7'];
+    document.getElementById("Hesoyam 0.7b").innerHTML = final_data_2[0]['Hesoyam 0.7b'];
+    document.getElementById("Hesoyam I").innerHTML = final_data_2[0]['Hesoyam I'];
+    document.getElementById("HYM LSTM+").innerHTML = final_data_2[0]['HYM LSTM+'];
+    document.getElementById("HYM LSTM-").innerHTML = final_data_2[0]['HYM LSTM-'];
+    document.getElementById("HYM LSTM-").innerHTML = final_data_2[0]['HYM LSTM-'];
+
+    db = final_data_2[0]['Database']
+  }
+  )
 
 const res = fetch(
   "https://opensheet.elk.sh/14ePg5bfMRZpy7tQZCI2K8CXreXBN97BkDYTj8nedYH4/API-out"
@@ -355,9 +374,9 @@ const res = fetch(
         },
       },
       legend: {
-        show: false,
+        show: true,
         position: "top",
-        horizontalAlign: "right",
+        horizontalAlign: "center",
         offsetY: 0,
       },
     };
@@ -383,15 +402,16 @@ const res = fetch(
       series: [
         {
           name: "Used Space",
-          data: [0.14],
+          data: [db],
         },
         {
           name: "Total Space",
-          data: [0.86],
+          data: [10000-db],
         },
       ],
       xaxis: {
         categories: ["Data Base"],
+        max: 10000,
       },
       fill: {
         opacity: 1,
@@ -420,18 +440,3 @@ const res = fetch(
     // Loading false
   })
   .catch((err) => console.log(err));
-
-  const dat = fetch(
-    "https://opensheet.elk.sh/14ePg5bfMRZpy7tQZCI2K8CXreXBN97BkDYTj8nedYH4/API-out-stats"
-  )
-    .then((response) => response.json())
-    .then((data) => {
-      const final_data_2 = data;
-      document.getElementById("organic").innerHTML = final_data_2[0]['Organic'];
-      document.getElementById("Lancelot 2.7").innerHTML = final_data_2[0]['Lancelot 2.7'];
-      document.getElementById("Hesoyam 0.7b").innerHTML = final_data_2[0]['Hesoyam 0.7b'];
-      document.getElementById("Hesoyam I").innerHTML = final_data_2[0]['Hesoyam I'];
-      document.getElementById("HYM LSTM+").innerHTML = final_data_2[0]['HYM LSTM+'];
-      document.getElementById("HYM LSTM-").innerHTML = final_data_2[0]['HYM LSTM-'];
-    }
-    )
