@@ -97,6 +97,11 @@ body {
   }
 
   .card h1 {
+    font-size: 1.8rem;
+    padding-left: 6%;
+  }
+
+  .card h2 {
     font-size: 1.6rem;
   }
 
@@ -105,7 +110,7 @@ body {
   }
 
   .greenColor {
-    color: green;
+    color: rgb(27, 167, 27);
   }
 
 
