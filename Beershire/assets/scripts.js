@@ -28,11 +28,11 @@ const dat = fetch(
       // if(Number(cardData.textContent) > )
       const data = cardData.textContent;
 
-      console.log("card data: ", Number(data.substring(0, data.indexOf("%"))));
+      // console.log("card data: ", Number(data.substring(0, data.indexOf("%"))));
 
-      if (Number(data.substring(0, data.indexOf("%"))) > 0) {
+      if (Number(data.substring(0, data.indexOf("%"))) < 0) {
         cardData.classList.add("redColor");
-      } else if (Number(data.substring(0, data.indexOf("%"))) < 0) {
+      } else if (Number(data.substring(0, data.indexOf("%"))) > 0) {
         cardData.classList.add("greenColor");
       }
     });
