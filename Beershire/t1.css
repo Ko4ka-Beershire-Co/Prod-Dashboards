@@ -1,0 +1,144 @@
+:root{
+    --backgroundColor:  rgba(23, 24, 22, 0.6);
+    --backgroundColor2: #63696b;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(78,173,152,1) 0%, rgba(240,182,77,1) 100%);
+    color: #34636e;
+    font-family: Montserrat, Arial, sans-serif;
+    margin: 0;
+    padding: 10px;
+  }
+
+  .header-box{
+    align-self: center;
+    position: relative;
+    margin: 10px 0;
+    padding: 0.5rem 0;
+    background: var(--backgroundColor);
+    border-radius: 5px;
+}
+
+.main-box{
+    margin: 10px 0;
+    padding: 0.5rem;
+    height: 50vh;
+    background: var(--backgroundColor);
+    border-radius: 5px;
+}
+/* 
+@media (max-width: 1200px){
+    .main-box{
+        max-height: 500px;
+    }
+}
+@media (max-width: 992px){
+    .main-box{
+        max-height: 420px;
+    }
+}
+@media (max-width: 767px){
+    .main-box{
+        max-height: 320px;
+    }
+} */
+
+/* .box {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+}
+.box > * {
+    flex: 1 1 200px;
+} */
+
+
+
+/* Bottom-box */
+.bottom-box {
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    /* gap: 1rem; */
+}
+
+.extra-box {
+
+    background-color: var(--backgroundColor);
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px
+}
+
+.card {
+    background-color: var(--backgroundColor);
+    color: #d5d1c0;
+    /* height: 50px; */
+    max-height: 200px;
+    /* Text Centering */
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    border-radius: 5px;
+  }
+
+
+     @media (max-width: 1000px){
+        .bottom-box {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    @media (max-width: 700px){
+        .cards {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+/* 
+.cards {
+    max-width: 100%;
+    margin: 0 auto;
+    display: grid;
+  }
+  @media (min-width: 600px) {
+    .cards { grid-template-columns: repeat(2, 1fr);
+            max-width: 100%; }
+  }
+  @media (min-width: 900px) {
+    .cards { grid-template-columns: repeat(3, 1fr);
+            max-width: 60%; }
+  }
+    
+.card {
+    background-color: rgb(124, 154, 184);
+    color: white;
+    padding: 1rem;
+    height: 4rem;
+  }
+.bottom-box{
+    columns: 2;
+}
+@media (max-width: 992px){
+    .bottom-box{
+        columns: 1;
+    }
+}
+.extra-box{
+    max-width: 40%;
+    color: white;
+} */
