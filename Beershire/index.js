@@ -1,23 +1,30 @@
 import fetch from "node-fetch";
 
-let response = await fetch('https://opensheet.elk.sh/14ePg5bfMRZpy7tQZCI2K8CXreXBN97BkDYTj8nedYH4/API-out');
+async function get_data(){
+  let response = await fetch('https://opensheet.elk.sh/14ePg5bfMRZpy7tQZCI2K8CXreXBN97BkDYTj8nedYH4/API-out');
 
-if (response.ok) { // если HTTP-статус в диапазоне 200-299
-  // получаем тело ответа (см. про этот метод ниже)
-  var text = await response.json(); // прочитать тело ответа как текст
-} else {
-  alert("Ошибка HTTP: " + response.status);
+  if (response.ok) { // если HTTP-статус в диапазоне 200-299
+    // получаем тело ответа (см. про этот метод ниже)
+    var text = await response.json(); // прочитать тело ответа как текст
+  } else {
+    alert("Ошибка HTTP: " + response.status);
+  }
+
+  let j = Object.keys(text).length
+
+  var i = 5
+  var values = []
+
+  while (i > 0) {
+    // console.log(text[j-i]) // как заказать 0:5
+    values.push(text[j-i]['Organic'])
+    i -= 1
+  }
+  return values
 }
 
-let j = Object.keys(text).length
 
-var i = 5
-while (i > 0) {
-  console.log(text[j-i]) // как заказать 0:5
-  i -= 1
-}
-
-
+get_data()
 /*
 app.get('/:id', async (req, res) => {
   const id = req.params.id;
