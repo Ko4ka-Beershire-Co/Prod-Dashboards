@@ -432,7 +432,7 @@ const res = fetch(
         },
         {
           name: "Total Space",
-          data: [10000 - db],
+          data: [(10000 - db)],
         },
       ],
       xaxis: {
@@ -450,6 +450,43 @@ const res = fetch(
         offsetX: -20,
       },
     };
+    const optionsBarDay = {
+      chart: {
+        height: 170,
+        type: "bar",
+        stacked: true,
+      },
+      plotOptions: {
+        bar: {
+          // columnWidth: "30%",
+          horizontal: true,
+        },
+      },
+      series: [
+        {
+          name: "Days Used",
+          data: [parseInt(db/4/24)],
+        },
+        {
+          name: "Days Left",
+          data: [parseInt((10000 - db)/4/24)],
+        },
+      ],
+      xaxis: {
+        categories: ["Cycle Dur."],
+        max: 10000/4/24,
+        tickAmount: 4,
+      },
+      fill: {
+        opacity: 1,
+      },
+      colors: ["#ad4d38", "#a2a3a5"], //Edit Colors Here
+      legend: {
+        position: "top",
+        horizontalAlign: "left",
+        offsetX: -20,
+      },
+    };
 
     const chartBar = new ApexCharts(
       document.querySelector("#barchart"),
@@ -460,7 +497,7 @@ const res = fetch(
 
     const chartBar2 = new ApexCharts(
       document.querySelector("#barchart2"),
-      optionsBar
+      optionsBarDay
     );
 
     chartBar2.render();
