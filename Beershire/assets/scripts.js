@@ -1,6 +1,6 @@
 // Loading true
 let db = 0;
-const n = 60;
+const n = 60*5;
 
 const dat = fetch(
   "https://opensheet.elk.sh/14ePg5bfMRZpy7tQZCI2K8CXreXBN97BkDYTj8nedYH4/API-out-stats"
@@ -506,21 +506,7 @@ const res = fetch(
   })
   .catch((err) => console.log(err));
 
- // Containers
- const MainChart = document.querySelector(".main-box");
- const Cards = document.querySelector(".cards");
- const BDTicks = document.querySelector(".extra-box");
-
-function updateStuff(stuff) {
-  for (const counter in stuff)
-  {
-    const oldHTML = stuff[counter].innerHTML;
-    stuff[counter].innerHTML = "";
-    stuff[counter].innerHTML = oldHTML;
-    console.log('Running')
-  }
-};
 
 setInterval(() => {
-  updateStuff({MainChart, Cards, BDTicks});
+  location.reload();
 }, n * 1000);
