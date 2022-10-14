@@ -11,7 +11,7 @@ priceBtns &&
     priceBtn.addEventListener("mouseover", (e) => {
       const span = document.createElement("span");
       span.classList.add("toolBox");
-      span.textContent = "Sashka lox, loading ....";
+      span.textContent = "Загрузка ....";
       priceBtn.appendChild(span);
 
       fetch(
@@ -21,8 +21,8 @@ priceBtns &&
         .then((data) => {
           // I just randomly pick a datetime from the data:
           // replace with your own logic
-          span.textContent =
-            data[Math.floor(Math.random() * data.length)].Datetime;
+          span.textContent = "Среднее:\nXX% / мес"
+            //data[Math.floor(Math.random() * data.length)].Datetime;
           //   console.log(data[0][e.target.id]);
         })
         .catch((err) => {

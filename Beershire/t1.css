@@ -117,13 +117,12 @@ body {
 
 /* For Hover Magic */
 .card-data {
-
     position: relative;
     cursor: pointer;
 }
-/* .card-data:hover {
-    color: #000;
-} */
+.card-data:hover {
+    color: #ecb45e;
+} 
 
 
 
@@ -134,7 +133,7 @@ body {
     position: absolute;
     top: -300%;
     right: -20%;
-    background-color: var(--backgroundColor2);
+    background-color: rgba(8, 8, 8, 0.6);
     color: whitesmoke;
     border-radius: 5px;
     display: flex;
