@@ -21,6 +21,8 @@ const dat = fetch(
       final_data_2[0]["HYM LSTM-"];
     document.getElementById("HYM LSTM-").innerHTML =
       final_data_2[0]["HYM LSTM-"];
+    document.getElementById("Hesoyam II").innerHTML =
+      final_data_2[0]["Hesoyam II"];
 
     db = final_data_2[0]["Database"];
 
@@ -60,6 +62,7 @@ const res = fetch(
     const HYMm = [];
     const HYMp = [];
     const Date_Time = [];
+    const Hesoyam_II_data = [];
 
     while (lookback > 2) {
       // console.log(text[j-i]) // как заказать 0:5
@@ -69,6 +72,7 @@ const res = fetch(
       Hesoyam_I_data.push(final_data[j - lookback]["Hesoyam I"]);
       HYMm.push(final_data[j - lookback]["HYM LSTM-"]);
       HYMp.push(final_data[j - lookback]["HYM LSTM+"]);
+      Hesoyam_II_data.push(final_data[j - lookback]["Hesoyam II"]);
       Date_Time.push(final_data[j - lookback]["Datetime"]);
       lookback -= 1;
     }
@@ -98,221 +102,6 @@ const res = fetch(
         },
       },
     };
-
-    // const spark1 = {
-    //   chart: {
-    //     id: "spark1",
-    //     group: "sparks",
-    //     type: "bar",
-    //     // height: "100%",
-    //     sparkline: {
-    //       enabled: true,
-    //     },
-    //     dropShadow: {
-    //       enabled: true,
-    //       top: 1,
-    //       left: 1,
-    //       blur: 2,
-    //       opacity: 0.2,
-    //     },
-    //   },
-    //   series: [
-    //     {
-    //       data: [25, 66, 41, 59, 25, 44, 12, 36, 9, 21],
-    //     },
-    //   ],
-    //   stroke: {
-    //     curve: "smooth",
-    //   },
-    //   markers: {
-    //     size: 0,
-    //   },
-    //   grid: {
-    //     padding: {
-    //       top: 20,
-    //       bottom: 10,
-    //       left: 110,
-    //     },
-    //   },
-    //   colors: ["#fff"],
-    //   tooltip: {
-    //     x: {
-    //       show: false,
-    //     },
-    //     y: {
-    //       title: {
-    //         formatter: function formatter(val) {
-    //           return "";
-    //         },
-    //       },
-    //     },
-    //   },
-    // };
-
-    // const spark2 = {
-    //   chart: {
-    //     id: "spark2",
-    //     group: "sparks",
-    //     type: "bar",
-    //     //height: "100%",
-    //     sparkline: {
-    //       enabled: true,
-    //     },
-    //     dropShadow: {
-    //       enabled: true,
-    //       top: 1,
-    //       left: 1,
-    //       blur: 2,
-    //       opacity: 0.2,
-    //     },
-    //   },
-    //   series: [
-    //     {
-    //       data: [12, 14, 2, 47, 32, 44, 14, 55, 41, 69],
-    //     },
-    //   ],
-    //   stroke: {
-    //     curve: "smooth",
-    //   },
-    //   grid: {
-    //     padding: {
-    //       top: 20,
-    //       bottom: 10,
-    //       left: 110,
-    //     },
-    //   },
-    //   markers: {
-    //     size: 0,
-    //   },
-    //   colors: ["#fff"],
-    //   tooltip: {
-    //     x: {
-    //       show: false,
-    //     },
-    //     y: {
-    //       title: {
-    //         formatter: function formatter(val) {
-    //           return "";
-    //         },
-    //       },
-    //     },
-    //   },
-    // };
-
-    // const spark3 = {
-    //   chart: {
-    //     id: "spark3",
-    //     group: "sparks",
-    //     type: "bar",
-    //     //height: "100%",
-    //     sparkline: {
-    //       enabled: true,
-    //     },
-    //     dropShadow: {
-    //       enabled: true,
-    //       top: 1,
-    //       left: 1,
-    //       blur: 2,
-    //       opacity: 0.2,
-    //     },
-    //   },
-    //   series: [
-    //     {
-    //       data: [47, 45, 74, 32, 56, 31, 44, 33, 45, 19],
-    //     },
-    //   ],
-    //   stroke: {
-    //     curve: "smooth",
-    //   },
-    //   markers: {
-    //     size: 0,
-    //   },
-    //   grid: {
-    //     padding: {
-    //       top: 20,
-    //       bottom: 10,
-    //       left: 110,
-    //     },
-    //   },
-    //   colors: ["#fff"],
-    //   xaxis: {
-    //     crosshairs: {
-    //       width: 1,
-    //     },
-    //   },
-    //   tooltip: {
-    //     x: {
-    //       show: false,
-    //     },
-    //     y: {
-    //       title: {
-    //         formatter: function formatter(val) {
-    //           return "";
-    //         },
-    //       },
-    //     },
-    //   },
-    // };
-
-    // const spark4 = {
-    //   chart: {
-    //     id: "spark4",
-    //     group: "sparks",
-    //     type: "bar",
-    //     //height: "100%",
-    //     sparkline: {
-    //       enabled: true,
-    //     },
-    //     dropShadow: {
-    //       enabled: true,
-    //       top: 1,
-    //       left: 1,
-    //       blur: 2,
-    //       opacity: 0.2,
-    //     },
-    //   },
-    //   series: [
-    //     {
-    //       data: [15, 75, 47, 65, 14, 32, 19, 54, 44, 61],
-    //     },
-    //   ],
-    //   stroke: {
-    //     curve: "smooth",
-    //   },
-    //   markers: {
-    //     size: 0,
-    //   },
-    //   grid: {
-    //     padding: {
-    //       top: 20,
-    //       bottom: 10,
-    //       left: 110,
-    //     },
-    //   },
-    //   colors: ["#fff"],
-    //   xaxis: {
-    //     crosshairs: {
-    //       width: 1,
-    //     },
-    //   },
-    //   tooltip: {
-    //     x: {
-    //       show: false,
-    //     },
-    //     y: {
-    //       title: {
-    //         formatter: function formatter(val) {
-    //           return "";
-    //         },
-    //       },
-    //     },
-    //   },
-    // };
-
-    // new ApexCharts(document.querySelector("#spark1"), spark1).render();
-    // new ApexCharts(document.querySelector("#spark2"), spark2).render();
-    // new ApexCharts(document.querySelector("#spark3"), spark3).render();
-    // new ApexCharts(document.querySelector("#spark4"), spark4).render();
 
     const optionsLine = {
       chart: {
@@ -356,6 +145,10 @@ const res = fetch(
           data: Hesoyam_I_data,
         },
         {
+          name: "Hesoyam II-b",
+          data: Hesoyam_II_data,
+        },
+        {
           name: "HYM-",
           data: HYMm,
         },
@@ -381,6 +174,7 @@ const res = fetch(
         "#ad4d38",
         "#ecb45e",
         "#4bbea0",
+        "#6bbc25",
         "#c5b785",
         "#d7e4de",
       ], //Edit Colors Here
