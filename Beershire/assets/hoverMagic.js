@@ -14,16 +14,18 @@ priceBtns &&
       span.textContent = "Загрузка ....";
       priceBtn.appendChild(span);
 
+
+      // Fetch JSON file with 2 columns: Number and Prompt value (text)
       fetch(
         "https://opensheet.elk.sh/14ePg5bfMRZpy7tQZCI2K8CXreXBN97BkDYTj8nedYH4/API-out"
       )
         .then((response) => response.json())
         .then((data) => {
-          // I just randomly pick a datetime from the data:
-          // replace with your own logic
-          span.textContent = "Среднее:\nXX% / мес"
-            //data[Math.floor(Math.random() * data.length)].Datetime;
-          //   console.log(data[0][e.target.id]);
+          
+          // Here
+          span.textContent = `Среднее: ${data[0].number}% / мес`;
+
+          
         })
         .catch((err) => {
           span.textContent = "Oops, something went wrong";
