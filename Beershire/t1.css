@@ -20,9 +20,23 @@ body {
     align-self: center;
     position: relative;
     margin: 10px 0;
-    padding: 0.5rem 0;
+    display: flex;
+    gap: 1rem;    
+}
+
+#coinmarketcap-widget-marquee,
+.btns-panel {
     background: var(--backgroundColor);
+    padding: 0.5rem;
     border-radius: 5px;
+}
+
+.btns-panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
 }
 
 .main-box{
@@ -85,7 +99,7 @@ body {
     margin-bottom: 5px
 }
 
-.card {
+.cardCustom {
     background-color: var(--backgroundColor);
     color: #d5d1c0;
     /* height: 50px; */
@@ -97,12 +111,12 @@ body {
     border-radius: 5px;
   }
 
-  .card h1 {
+  .cardCustom h1 {
     font-size: 1.8rem;
     /*padding-left: 6%;*/
   }
 
-  .card h2 {
+  .cardCustom h2 {
     font-size: 1.6rem;
   }
 
@@ -147,6 +161,51 @@ body {
     display: block;
 }
 
+#dropdownMenuButton {
+    min-width: 110px;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    border-radius: 5px;
+    padding: .2rem .3rem;
+}
+
+.dropdown-menu {
+    min-width: 110px !important;
+}
+
+.dropdownBtnMobile {
+    display: none;
+}
+
+
+     @media (max-width: 900px){
+        #dropdownMenuButton {
+            min-width: 40px;
+        }
+
+        .dropdown-menu {
+            min-width: 60px !important;
+            right: -8px !important;
+            left: unset !important;
+        }
+
+        .dropdown-item {
+            padding: 0.2rem 0.6rem !important;
+        }
+
+        .dropdown-toggle::after {
+            display: none !important;
+        }
+
+        .dropdownBtnDesktop {
+            display: none;
+        }
+
+        .dropdownBtnMobile {
+            display: block;
+        }
+    }
 
      @media (max-width: 1000px){
         .bottom-box {
