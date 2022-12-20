@@ -8,7 +8,7 @@
     <link rel="icon" type="image/x-icon" href="https://static.tildacdn.info/tild3036-3565-4263-b561-303065623939/noroot.png">
     <link rel="stylesheet" href="t1.css" />
     <link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
     <div class="header-box">
@@ -22,6 +22,20 @@
             style="overflow:hidden;"
         >
         </div>
+        <div class="btns-panel">
+            <!-- <button class="btn" id="btnTimeframe">Change</button> -->
+            <div class="dropdown">
+                <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="dropdownBtnDesktop">timeframe</span>
+                  <span class="dropdownBtnMobile"><i class="fa fa-bars" aria-hidden="true"></i></span>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item btnTimeframe" href="#">15m</a>
+                    <a class="dropdown-item btnTimeframe" href="#">1h</a>
+                  <!-- <a class="dropdown-item" href="#">5m</a> -->
+                </div>
+              </div>
+        </div>
         <script type="text/javascript"
             width = 100%
             height = 100%
@@ -32,68 +46,68 @@
         <div id="line-adwords"></div>
     </div>
     <div class="bottom-box">
-        <div class="cards"> <!--Вот ты на компе занимаешь 60%, а не эта хуета, а на телефонах 100%-->
-            <div class="card">
+        <div class="cards"> 
+            <div class="cardCustom">
                 <h1 style="color: #a2a3a5; text-align: center;">Organic</h1>
                 <h2 class="card-data" style="text-align: center;" id="organic"></h2>
                 
             </div>
-            <div class="card">
+            <div class="cardCustom">
                 <h1 style="color: #ad4d38; text-align: center;">Lancelot</h1>
                 <h2 class="card-data" style="text-align: center;" id="Lancelot 2.7"></h2>
             </div>
-            <div class="card">
+            <div class="cardCustom">
                 <h1 style="color: #ecb45e; text-align: center;">✔️Hesoyam 0.7-b</h1>
                 <h2 class="card-data" style="text-align: center;" id="Hesoyam 0.7b"></h2>
             </div>
-            <div class="card">
+            <div class="cardCustom">
                 <h1 style="color: #4bbea0; text-align: center;">Hesoyam I</h1>
                 <h2 class="card-data" style="text-align: center;" id="Hesoyam I"></h2>
             </div>
-            <div class="card">
+            <div class="cardCustom">
                 <h1 style="color: #c5b785; text-align: center;">HYM LSTM-</h1>
                 <h2 class="card-data" style="text-align: center;" id="HYM LSTM-"></h2>
             </div>
-            <div class="card">
+            <div class="cardCustom">
                 <h1 style="color: #d7e4de; text-align: center;">HYM LSTM+</h1>
                 <h2 class="card-data" style="text-align: center;" id="HYM LSTM+"></h2>
             </div>
-            <div class="card">
-                <h1 style="color: #6BBC25; text-align: center;">✔️Hesoyam II-b</h1>
-                <h2 class="card-data" style="text-align: center;" id="Hesoyam II"></h2>
-            </div>
-            <div class="card">
+            <div class="cardCustom">
                 <h1 style=" text-align: center;">NaN</h1>
                 <h2 class="card-data" style="text-align: center;">>Fetch Data</h2>
             </div>
-            <div class="card">
+            <div class="cardCustom">
                 <h1 style=" text-align: center;">NaN</h1>
                 <h2 class="card-data" style="text-align: center;">>Fetch Data</h2>
             </div>
-            <div class="card">
+            <div class="cardCustom">
                 <h1 style=" text-align: center;">NaN</h1>
                 <h2 class="card-data" style="text-align: center;">>Fetch Data</h2>
             </div>
-            <div class="card">
+            <div class="cardCustom">
                 <h1 style=" text-align: center;">NaN</h1>
                 <h2 class="card-data" style="text-align: center;">>Fetch Data</h2>
             </div>
-            <div class="card">
+            <div class="cardCustom">
                 <h1 style=" text-align: center;">NaN</h1>
                 <h2 class="card-data" style="text-align: center;">>Fetch Data</h2>
             </div>
-            <!-- <div class="card">Flex ONE</div>
-            <div class="card">Flex TWO</div>
-            <div class="card">Flex THREE</div>
-            <div class="card">Flex FOUR</div>
-            <div class="card">Flex FIVE</div>
-            <div class="card">Flex SIX</div>
-            <div class="card">Flex SEVEN</div>
-            <div class="card">Flex EIGHT</div>
-            <div class="card">Flex NINE</div>
-            <div class="card">Flex TEN</div>
-            <div class="card">Flex ELEVEN</div>
-            <div class="card">Flex TWELVE</div> -->
+            <div class="cardCustom">
+                <h1 style=" text-align: center;">NaN</h1>
+                <h2 class="card-data" style="text-align: center;">>Fetch Data</h2>
+            </div>
+            <!-- <div class="cardCustom">Flex ONE</div>
+            <div class="cardCustom">Flex TWO</div>
+            <div class="cardCustom">Flex THREE</div>
+            <div class="cardCustom">Flex FOUR</div>
+            <div class="cardCustom">Flex FIVE</div>
+            <div class="cardCustom">Flex SIX</div>
+            <div class="cardCustom">Flex SEVEN</div>
+            <div class="cardCustom">Flex EIGHT</div>
+            <div class="cardCustom">Flex NINE</div>
+            <div class="cardCustom">Flex TEN</div>
+            <div class="cardCustom">Flex ELEVEN</div>
+            <div class="cardCustom">Flex TWELVE</div> -->
         </div>
         <div class="extra-box"><!--Вот ты на компе занимаешь 40%, а не эта хуета-->
             <div id="barchart"></div>
@@ -101,9 +115,12 @@
         </div>
     </div>
     
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-<script src="assets/scripts.js"></script>
-<script src="./assets/hoverMagic.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="assets/scripts.js"></script>
+    <script src="./assets/hoverMagic.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
