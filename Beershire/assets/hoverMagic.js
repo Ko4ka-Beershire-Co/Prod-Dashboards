@@ -23,7 +23,7 @@ priceBtns &&
         .then((data) => {
           
           // Here
-          span.textContent = `Среднее: ${data[0].number}% / мес`;
+          span.textContent = `Среднее: % / мес`;
 
           
         })

@@ -8,19 +8,20 @@ const dat = fetch(
   .then((response) => response.json())
   .then((data) => {
     const final_data_2 = data;
-    document.getElementById("organic").innerHTML = final_data_2[0]["Organic"];
+    document.getElementById("organic").innerHTML =
+      final_data_2[0]["Organic"];
     document.getElementById("Lancelot 2.7").innerHTML =
-      final_data_2[0]["Lancelot 2.7"];
+      final_data_2[0]["Hesoyam II"];
     document.getElementById("Hesoyam 0.7b").innerHTML =
-      final_data_2[0]["Hesoyam 0.7b"];
+      final_data_2[0]["Hesoyam II-s"];
     document.getElementById("Hesoyam I").innerHTML =
-      final_data_2[0]["Hesoyam I"];
+      final_data_2[0]["Hesoyam II-h"];
     document.getElementById("HYM LSTM+").innerHTML =
-      final_data_2[0]["HYM LSTM+"];
+      final_data_2[0]["Hesoyam I"];
     document.getElementById("HYM LSTM-").innerHTML =
       final_data_2[0]["HYM LSTM-"];
     document.getElementById("HYM LSTM-").innerHTML =
-      final_data_2[0]["HYM LSTM-"];
+      final_data_2[0]["Hesoyam II-s"];
 
     db = final_data_2[0]["Database"];
 
@@ -83,33 +84,37 @@ function loadData(timeframe) {
     .then((response) => response.json())
     .then((data) => {
       const final_data = data;
+      console.log(final_data)
       console.log('again');
       // Actual Code goes in here
 
       let j = Object.keys(final_data).length;
-
+      
       // Set Arrays
-      const days = 20;
+      let days = 30;
+/*       if (timeframe == 1){
+        days = 10;
+      } */
       let lookback = 4 * 24 * days;
       const Organic_data = [];
       const Lancelot_data = [];
-      const Hesoyam_07b_data = [];
-      const Hesoyam_I_data = [];
-      const HYMm = [];
-      const HYMp = [];
+      //const Hesoyam_07b_data = [];
+      //const Hesoyam_I_data = [];
+      //const HYMm = [];
+      //const HYMp = [];
       const Date_Time = [];
 
       while (lookback > 2) {
         // console.log(text[j-i]) // как заказать 0:5
         Organic_data.push(final_data[j - lookback]["Organic"]);
-        Lancelot_data.push(final_data[j - lookback]["Lancelot 2.7"]);
-        Hesoyam_07b_data.push(final_data[j - lookback]["Hesoyam 0.7b"]);
-        Hesoyam_I_data.push(final_data[j - lookback]["Hesoyam I"]);
-        HYMm.push(final_data[j - lookback]["HYM LSTM-"]);
-        HYMp.push(final_data[j - lookback]["HYM LSTM+"]);
+        Lancelot_data.push(final_data[j - lookback]["Hesoyam II"]);
+        //Hesoyam_07b_data.push(final_data[j - lookback]["Hesoyam II-s"]);
+        //Hesoyam_I_data.push(final_data[j - lookback]["Hesoyam II-h"]);
+        //HYMm.push(final_data[j - lookback]["HYM LSTM-"]);
+        //HYMp.push(final_data[j - lookback]["HYM LSTM+"]);
         Date_Time.push(final_data[j - lookback]["Datetime"]);
         lookback -= 1;
-      }
+        }
 
       window.Apex = {
         chart: {
@@ -382,10 +387,10 @@ function loadData(timeframe) {
             data: Organic_data,
           },
           {
-            name: "Lancelot 2.7",
+            name: "Hesoyam II",
             data: Lancelot_data,
           },
-          {
+/*           {
             name: "Hesoyam 0.7b",
             data: Hesoyam_07b_data,
           },
@@ -400,7 +405,7 @@ function loadData(timeframe) {
           {
             name: "HYM+",
             data: HYMp,
-          },
+          }, */
         ],
         title: {
           text: "Weekly Chart",
@@ -416,7 +421,7 @@ function loadData(timeframe) {
         },
         colors: [
           "#a2a3a5",
-          "#ad4d38",
+          "#4bbea0",
           "#ecb45e",
           "#4bbea0",
           "#c5b785",
@@ -471,12 +476,12 @@ function loadData(timeframe) {
           },
           {
             name: "Total Space",
-            data: [(10000 - db)],
+            data: [(35000 - db)],
           },
         ],
         xaxis: {
           categories: ["Data Base"],
-          max: 10000,
+          max: 35000,
           tickAmount: 4,
         },
         fill: {
@@ -508,12 +513,12 @@ function loadData(timeframe) {
           },
           {
             name: "Days Left",
-            data: [parseInt((10000 - db)/4/24)],
+            data: [parseInt((35000 - db)/4/24)],
           },
         ],
         xaxis: {
           categories: ["Cycle Dur."],
-          max: 10000/4/24,
+          max: 35000/4/24,
           tickAmount: 4,
         },
         fill: {
