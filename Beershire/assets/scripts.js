@@ -100,7 +100,7 @@ function loadData(timeframe) {
       const Lancelot_data = [];
       //const Hesoyam_07b_data = [];
       //const Hesoyam_I_data = [];
-      //const HYMm = [];
+      const HYMm = [];
       //const HYMp = [];
       const Date_Time = [];
 
@@ -110,7 +110,7 @@ function loadData(timeframe) {
         Lancelot_data.push(final_data[j - lookback]["Hesoyam II"]);
         //Hesoyam_07b_data.push(final_data[j - lookback]["Hesoyam II-s"]);
         //Hesoyam_I_data.push(final_data[j - lookback]["Hesoyam II-h"]);
-        //HYMm.push(final_data[j - lookback]["HYM LSTM-"]);
+        HYMm.push(final_data[j - lookback]["Hesoyam I"]);
         //HYMp.push(final_data[j - lookback]["HYM LSTM+"]);
         Date_Time.push(final_data[j - lookback]["Datetime"]);
         lookback -= 1;
@@ -124,7 +124,7 @@ function loadData(timeframe) {
           },
         },
         stroke: {
-          width: 3,
+          width: 2,
         },
         dataLabels: {
           enabled: false,
@@ -402,10 +402,11 @@ function loadData(timeframe) {
             name: "HYM-",
             data: HYMm,
           },
+           */
           {
-            name: "HYM+",
-            data: HYMp,
-          }, */
+            name: "Hesoyam I-py",
+            data: HYMm,
+          },
         ],
         title: {
           text: "Weekly Chart",
