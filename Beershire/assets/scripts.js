@@ -20,8 +20,6 @@ const dat = fetch(
       final_data_2[0]["Hesoyam I"];
     document.getElementById("HYM LSTM-").innerHTML =
       final_data_2[0]["HYM LSTM-"];
-    document.getElementById("HYM LSTM-").innerHTML =
-      final_data_2[0]["Hesoyam II-s"];
 
     db = final_data_2[0]["Database"];
 
@@ -98,8 +96,8 @@ function loadData(timeframe) {
       let lookback = 4 * 24 * days;
       const Organic_data = [];
       const Lancelot_data = [];
-      //const Hesoyam_07b_data = [];
-      //const Hesoyam_I_data = [];
+      const Hesoyam_07b_data = [];
+      const Hesoyam_I_data = [];
       const HYMm = [];
       //const HYMp = [];
       const Date_Time = [];
@@ -108,8 +106,8 @@ function loadData(timeframe) {
         // console.log(text[j-i]) // как заказать 0:5
         Organic_data.push(final_data[j - lookback]["Organic"]);
         Lancelot_data.push(final_data[j - lookback]["Hesoyam II"]);
-        //Hesoyam_07b_data.push(final_data[j - lookback]["Hesoyam II-s"]);
-        //Hesoyam_I_data.push(final_data[j - lookback]["Hesoyam II-h"]);
+        Hesoyam_07b_data.push(final_data[j - lookback]["Hesoyam II-s"]);
+        Hesoyam_I_data.push(final_data[j - lookback]["Hesoyam II-h"]);
         HYMm.push(final_data[j - lookback]["Hesoyam I"]);
         //HYMp.push(final_data[j - lookback]["HYM LSTM+"]);
         Date_Time.push(final_data[j - lookback]["Datetime"]);
@@ -390,14 +388,15 @@ function loadData(timeframe) {
             name: "Hesoyam II",
             data: Lancelot_data,
           },
-/*           {
-            name: "Hesoyam 0.7b",
+          {
+            name: "Hesoyam II s",
             data: Hesoyam_07b_data,
           },
           {
-            name: "Hesoyam I",
+            name: "Hesoyam II h",
             data: Hesoyam_I_data,
           },
+          /* 
           {
             name: "HYM-",
             data: HYMm,
@@ -409,7 +408,7 @@ function loadData(timeframe) {
           },
         ],
         title: {
-          text: "Weekly Chart",
+          text: "Доходность моделей. V 3.9.0",
           align: "left",
           offsetY: 5,
           offsetX: 5,
@@ -422,9 +421,9 @@ function loadData(timeframe) {
         },
         colors: [
           "#a2a3a5",
-          "#4bbea0",
-          "#ecb45e",
-          "#4bbea0",
+          "#33ccff",
+          "#8080ff",
+          "#00e6b8",
           "#c5b785",
           "#d7e4de",
         ], //Edit Colors Here
@@ -457,6 +456,10 @@ function loadData(timeframe) {
         optionsLine
       );
       chartLine.render();
+        
+      // disable legent display
+      chartLine.series.toggleSeries('Organic')
+      chartLine.series.toggleSeries('Hesoyam I-py')
 
       const optionsBar = {
         chart: {
