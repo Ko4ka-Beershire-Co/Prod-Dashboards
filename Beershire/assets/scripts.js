@@ -667,8 +667,9 @@ function loadData(timeframe) {
       },
       plotOptions: {
         heatmap: {
-          shadeIntensity: 1,
-          radius: 0,
+          enableShades: false,
+          shadeIntensity: 0.9,
+          radius: 5,
           useFillColorAsStroke: true,
           colorScale: {
             ranges: [{
