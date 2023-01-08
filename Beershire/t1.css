@@ -78,10 +78,11 @@ body {
 /* Bottom-box */
 .bottom-box {
     display: grid;
-    grid-template-columns: 60% 40%;
+    grid-template-columns: 40% 30% 30%; /* Edit here*/
 }
 
 .cards {
+    /* width: 60%; */
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 5px;
@@ -91,12 +92,14 @@ body {
 }
 
 .extra-box {
-
     background-color: var(--backgroundColor);
     padding: 5px;
     border-radius: 5px;
     margin-top: 5px;
-    margin-bottom: 5px
+    margin-bottom: 5px;
+    margin-right: 5px;
+    align-items: center;
+    justify-content: center;
 }
 
 .cardCustom {
@@ -113,12 +116,12 @@ body {
   }
 
   .cardCustom h1 {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     /*padding-left: 6%;*/
   }
 
   .cardCustom h2 {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
   }
 
   .redColor {
