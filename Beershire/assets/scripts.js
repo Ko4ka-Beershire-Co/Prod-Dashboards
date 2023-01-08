@@ -494,7 +494,7 @@ function loadData(timeframe) {
         colors: ["#f0b64d", "#4ead98"], //Edit Colors Here
         legend: {
           position: "top",
-          horizontalAlign: "left",
+          horizontalAlign: "center",
           offsetX: -20,
         },
       };
@@ -531,7 +531,7 @@ function loadData(timeframe) {
         colors: ["#ad4d38", "#a2a3a5"], //Edit Colors Here
         legend: {
           position: "top",
-          horizontalAlign: "left",
+          horizontalAlign: "center",
           offsetX: -20,
         },
       };
@@ -555,108 +555,108 @@ function loadData(timeframe) {
         series: [{
           name: 'Jan',
           data: [
-                  {x: 'W1', y: 7},
-                  {x: 'W2', y: 13},
-                  {x: 'W3', y: 3},
-                  {x: 'W4+', y: 0}
-                ]
+            {x: 'W1', y: 0},
+            {x: 'W2', y: 0},
+            {x: 'W3', y: null},
+            {x: 'W4+', y: null}
+          ]
         },
         {
           name: 'Feb',
           data: [
-            {x: 'W1', y: 7},
-            {x: 'W2', y: 13},
-            {x: 'W3', y: 3},
-            {x: 'W4', y: 0}
+            {x: 'W1', y: null},
+            {x: 'W2', y: null},
+            {x: 'W3', y: null},
+            {x: 'W4', y: null}
           ]
         },
         {
           name: 'Mar',
           data: [
-            {x: 'W1', y: 7},
-            {x: 'W2', y: 13},
-            {x: 'W3', y: 3},
-            {x: 'W4', y: 0}
+            {x: 'W1', y: null},
+            {x: 'W2', y: null},
+            {x: 'W3', y: null},
+            {x: 'W4', y: null}
           ]
         },
         {
           name: 'Apr',
           data: [
-            {x: 'W1', y: 7},
-            {x: 'W2', y: 13},
-            {x: 'W3', y: 3},
-            {x: 'W4', y: 0}
+            {x: 'W1', y: null},
+            {x: 'W2', y: null},
+            {x: 'W3', y: null},
+            {x: 'W4', y: null}
           ]
         },
         {
           name: 'May',
           data: [
-            {x: 'W1', y: 7},
-            {x: 'W2', y: 13},
-            {x: 'W3', y: 3},
-            {x: 'W4', y: 0}
+            {x: 'W1', y: null},
+            {x: 'W2', y: null},
+            {x: 'W3', y: null},
+            {x: 'W4', y: null}
           ]
         },
         {
           name: 'Jun',
           data: [
-            {x: 'W1', y: 7},
-            {x: 'W2', y: 13},
-            {x: 'W3', y: 3},
-            {x: 'W4', y: 0}
+            {x: 'W1', y: null},
+            {x: 'W2', y: null},
+            {x: 'W3', y: null},
+            {x: 'W4', y: null}
           ]
         },
         {
           name: 'Jul',
           data: [
-            {x: 'W1', y: 7},
-            {x: 'W2', y: 13},
-            {x: 'W3', y: 3},
-            {x: 'W4', y: 0}
+            {x: 'W1', y: null},
+            {x: 'W2', y: null},
+            {x: 'W3', y: null},
+            {x: 'W4', y: null}
           ]
         },
         {
           name: 'Aug',
           data: [
-            {x: 'W1', y: 7},
-            {x: 'W2', y: 13},
-            {x: 'W3', y: 3},
-            {x: 'W4', y: 0}
+            {x: 'W1', y: null},
+            {x: 'W2', y: null},
+            {x: 'W3', y: null},
+            {x: 'W4', y: null}
           ]
         },
         {
           name: 'Sep',
           data: [
-            {x: 'W1', y: 7},
-            {x: 'W2', y: 13},
-            {x: 'W3', y: 3},
-            {x: 'W4', y: 0}
+            {x: 'W1', y: null},
+            {x: 'W2', y: null},
+            {x: 'W3', y: null},
+            {x: 'W4', y: null}
           ]
         },
         {
           name: 'Oct',
           data: [
-            {x: 'W1', y: 7},
-            {x: 'W2', y: 13},
-            {x: 'W3', y: 3},
-            {x: 'W4', y: 0}
+            {x: 'W1', y: null},
+            {x: 'W2', y: null},
+            {x: 'W3', y: null},
+            {x: 'W4', y: null}
           ]
         },
         {
           name: 'Nov',
           data: [
-            {x: 'W1', y: 7},
-            {x: 'W2', y: 13},
-            {x: 'W3', y: 3},
-            {x: 'W4', y: 87}
+            {x: 'W1', y: null},
+            {x: 'W2', y: null},
+            {x: 'W3', y: null},
+            {x: 'W4', y: null}
           ]
         },
         {
           name: 'Dec',
           data: [
-            {x: 'W1', y: 7},
-            {x: 'W2', y: 13},
-            {x: 'W3', y: 3},
+            {x: 'W1', y: null},
+            {x: 'W2', y: null},
+            {x: 'W3', y: null},
             {x: 'W4', y: null}
           ]
         },
@@ -667,33 +667,39 @@ function loadData(timeframe) {
       },
       plotOptions: {
         heatmap: {
-          shadeIntensity: 0.5,
+          shadeIntensity: 1,
           radius: 0,
           useFillColorAsStroke: true,
           colorScale: {
             ranges: [{
                 from: 0,
+                to: 0,
+                name: 'Нет',
+                color: '#30544c',
+              },
+              {
+                from: 1,
                 to: 5,
-                name: 'low',
-                color: '#00A100'
+                name: 'Низкая',
+                color: '#decb0e'
               },
               {
                 from: 6,
                 to: 12,
-                name: 'medium',
-                color: '#128FD9'
+                name: 'Средняя',
+                color: '#5e9c20'
               },
               {
                 from: 13,
                 to: 20,
-                name: 'high',
-                color: '#FFB200'
+                name: 'Высокая',
+                color: '#ffab00'
               },
               {
                 from: 20,
                 to: 99,
-                name: 'extreme',
-                color: '#FF0000'
+                name: 'Аномальная',
+                color: '#ee0c04'
               }
             ]
           }
@@ -706,7 +712,7 @@ function loadData(timeframe) {
         width: 1
       },
       title: {
-        text: 'Торговая активность Hesoyam II (сделок в неделю 2023)'
+        text: 'Активность Hesoyam II (сделок в неделю 2023)'
       },
       };
 
