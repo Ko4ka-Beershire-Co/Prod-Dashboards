@@ -38,6 +38,7 @@ const dat = fetch(
     });
   });
 
+  
 // buttons
 // const btnTimeframe = document.getElementById("btnTimeframe");
 const timeframeBtns = document.querySelectorAll(".btnTimeframe");
@@ -139,221 +140,6 @@ function loadData(timeframe) {
           },
         },
       };
-
-      // const spark1 = {
-      //   chart: {
-      //     id: "spark1",
-      //     group: "sparks",
-      //     type: "bar",
-      //     // height: "100%",
-      //     sparkline: {
-      //       enabled: true,
-      //     },
-      //     dropShadow: {
-      //       enabled: true,
-      //       top: 1,
-      //       left: 1,
-      //       blur: 2,
-      //       opacity: 0.2,
-      //     },
-      //   },
-      //   series: [
-      //     {
-      //       data: [25, 66, 41, 59, 25, 44, 12, 36, 9, 21],
-      //     },
-      //   ],
-      //   stroke: {
-      //     curve: "smooth",
-      //   },
-      //   markers: {
-      //     size: 0,
-      //   },
-      //   grid: {
-      //     padding: {
-      //       top: 20,
-      //       bottom: 10,
-      //       left: 110,
-      //     },
-      //   },
-      //   colors: ["#fff"],
-      //   tooltip: {
-      //     x: {
-      //       show: false,
-      //     },
-      //     y: {
-      //       title: {
-      //         formatter: function formatter(val) {
-      //           return "";
-      //         },
-      //       },
-      //     },
-      //   },
-      // };
-
-      // const spark2 = {
-      //   chart: {
-      //     id: "spark2",
-      //     group: "sparks",
-      //     type: "bar",
-      //     //height: "100%",
-      //     sparkline: {
-      //       enabled: true,
-      //     },
-      //     dropShadow: {
-      //       enabled: true,
-      //       top: 1,
-      //       left: 1,
-      //       blur: 2,
-      //       opacity: 0.2,
-      //     },
-      //   },
-      //   series: [
-      //     {
-      //       data: [12, 14, 2, 47, 32, 44, 14, 55, 41, 69],
-      //     },
-      //   ],
-      //   stroke: {
-      //     curve: "smooth",
-      //   },
-      //   grid: {
-      //     padding: {
-      //       top: 20,
-      //       bottom: 10,
-      //       left: 110,
-      //     },
-      //   },
-      //   markers: {
-      //     size: 0,
-      //   },
-      //   colors: ["#fff"],
-      //   tooltip: {
-      //     x: {
-      //       show: false,
-      //     },
-      //     y: {
-      //       title: {
-      //         formatter: function formatter(val) {
-      //           return "";
-      //         },
-      //       },
-      //     },
-      //   },
-      // };
-
-      // const spark3 = {
-      //   chart: {
-      //     id: "spark3",
-      //     group: "sparks",
-      //     type: "bar",
-      //     //height: "100%",
-      //     sparkline: {
-      //       enabled: true,
-      //     },
-      //     dropShadow: {
-      //       enabled: true,
-      //       top: 1,
-      //       left: 1,
-      //       blur: 2,
-      //       opacity: 0.2,
-      //     },
-      //   },
-      //   series: [
-      //     {
-      //       data: [47, 45, 74, 32, 56, 31, 44, 33, 45, 19],
-      //     },
-      //   ],
-      //   stroke: {
-      //     curve: "smooth",
-      //   },
-      //   markers: {
-      //     size: 0,
-      //   },
-      //   grid: {
-      //     padding: {
-      //       top: 20,
-      //       bottom: 10,
-      //       left: 110,
-      //     },
-      //   },
-      //   colors: ["#fff"],
-      //   xaxis: {
-      //     crosshairs: {
-      //       width: 1,
-      //     },
-      //   },
-      //   tooltip: {
-      //     x: {
-      //       show: false,
-      //     },
-      //     y: {
-      //       title: {
-      //         formatter: function formatter(val) {
-      //           return "";
-      //         },
-      //       },
-      //     },
-      //   },
-      // };
-
-      // const spark4 = {
-      //   chart: {
-      //     id: "spark4",
-      //     group: "sparks",
-      //     type: "bar",
-      //     //height: "100%",
-      //     sparkline: {
-      //       enabled: true,
-      //     },
-      //     dropShadow: {
-      //       enabled: true,
-      //       top: 1,
-      //       left: 1,
-      //       blur: 2,
-      //       opacity: 0.2,
-      //     },
-      //   },
-      //   series: [
-      //     {
-      //       data: [15, 75, 47, 65, 14, 32, 19, 54, 44, 61],
-      //     },
-      //   ],
-      //   stroke: {
-      //     curve: "smooth",
-      //   },
-      //   markers: {
-      //     size: 0,
-      //   },
-      //   grid: {
-      //     padding: {
-      //       top: 20,
-      //       bottom: 10,
-      //       left: 110,
-      //     },
-      //   },
-      //   colors: ["#fff"],
-      //   xaxis: {
-      //     crosshairs: {
-      //       width: 1,
-      //     },
-      //   },
-      //   tooltip: {
-      //     x: {
-      //       show: false,
-      //     },
-      //     y: {
-      //       title: {
-      //         formatter: function formatter(val) {
-      //           return "";
-      //         },
-      //       },
-      //     },
-      //   },
-      // };
-
-      // new ApexCharts(document.querySelector("#spark1"), spark1).render();
-      // new ApexCharts(document.querySelector("#spark2"), spark2).render();
-      // new ApexCharts(document.querySelector("#spark3"), spark3).render();
-      // new ApexCharts(document.querySelector("#spark4"), spark4).render();
 
       const optionsLine = {
         chart: {
@@ -550,177 +336,185 @@ function loadData(timeframe) {
 
       chartBar2.render();
       // Loading false
-
-      var options = {
-        series: [{
-          name: 'Jan',
-          data: [
-            {x: 'W1', y: 0},
-            {x: 'W2', y: 0},
-            {x: 'W3', y: null},
-            {x: 'W4+', y: null}
-          ]
-        },
-        {
-          name: 'Feb',
-          data: [
-            {x: 'W1', y: null},
-            {x: 'W2', y: null},
-            {x: 'W3', y: null},
-            {x: 'W4', y: null}
-          ]
-        },
-        {
-          name: 'Mar',
-          data: [
-            {x: 'W1', y: null},
-            {x: 'W2', y: null},
-            {x: 'W3', y: null},
-            {x: 'W4', y: null}
-          ]
-        },
-        {
-          name: 'Apr',
-          data: [
-            {x: 'W1', y: null},
-            {x: 'W2', y: null},
-            {x: 'W3', y: null},
-            {x: 'W4', y: null}
-          ]
-        },
-        {
-          name: 'May',
-          data: [
-            {x: 'W1', y: null},
-            {x: 'W2', y: null},
-            {x: 'W3', y: null},
-            {x: 'W4', y: null}
-          ]
-        },
-        {
-          name: 'Jun',
-          data: [
-            {x: 'W1', y: null},
-            {x: 'W2', y: null},
-            {x: 'W3', y: null},
-            {x: 'W4', y: null}
-          ]
-        },
-        {
-          name: 'Jul',
-          data: [
-            {x: 'W1', y: null},
-            {x: 'W2', y: null},
-            {x: 'W3', y: null},
-            {x: 'W4', y: null}
-          ]
-        },
-        {
-          name: 'Aug',
-          data: [
-            {x: 'W1', y: null},
-            {x: 'W2', y: null},
-            {x: 'W3', y: null},
-            {x: 'W4', y: null}
-          ]
-        },
-        {
-          name: 'Sep',
-          data: [
-            {x: 'W1', y: null},
-            {x: 'W2', y: null},
-            {x: 'W3', y: null},
-            {x: 'W4', y: null}
-          ]
-        },
-        {
-          name: 'Oct',
-          data: [
-            {x: 'W1', y: null},
-            {x: 'W2', y: null},
-            {x: 'W3', y: null},
-            {x: 'W4', y: null}
-          ]
-        },
-        {
-          name: 'Nov',
-          data: [
-            {x: 'W1', y: null},
-            {x: 'W2', y: null},
-            {x: 'W3', y: null},
-            {x: 'W4', y: null}
-          ]
-        },
-        {
-          name: 'Dec',
-          data: [
-            {x: 'W1', y: null},
-            {x: 'W2', y: null},
-            {x: 'W3', y: null},
-            {x: 'W4', y: null}
-          ]
-        },
-      ],
-        chart: {
-        height: 350,
-        type: 'heatmap',
-      },
-      plotOptions: {
-        heatmap: {
-          enableShades: false,
-          shadeIntensity: 0.9,
-          radius: 5,
-          useFillColorAsStroke: true,
-          colorScale: {
-            ranges: [{
-                from: 0,
-                to: 0,
-                name: 'Нет',
-                color: '#30544c',
-              },
-              {
-                from: 1,
-                to: 5,
-                name: 'Низкая',
-                color: '#decb0e'
-              },
-              {
-                from: 6,
-                to: 12,
-                name: 'Средняя',
-                color: '#5e9c20'
-              },
-              {
-                from: 13,
-                to: 20,
-                name: 'Высокая',
-                color: '#ffab00'
-              },
-              {
-                from: 20,
-                to: 99,
-                name: 'Аномальная',
-                color: '#ee0c04'
-              }
+      const activityStatus = fetch(
+        "https://opensheet.elk.sh/14ePg5bfMRZpy7tQZCI2K8CXreXBN97BkDYTj8nedYH4/Activity-API"
+      )
+        .then((response) => response.json())
+        .then((data) => { 
+        var options = {
+          series: [{
+            name: 'Jan',
+            data: [
+              {x: 'W1', y: data[0]['W1']},
+              {x: 'W2', y: data[0]['W2']},
+              {x: 'W3', y: data[0]['W3']},
+              {x: 'W4+', y: data[0]['W4']}
             ]
+          },
+          {
+            name: 'Feb',
+            data: [
+              {x: 'W1', y: null},
+              {x: 'W2', y: null},
+              {x: 'W3', y: null},
+              {x: 'W4', y: null}
+            ]
+          },
+          {
+            name: 'Mar',
+            data: [
+              {x: 'W1', y: null},
+              {x: 'W2', y: null},
+              {x: 'W3', y: null},
+              {x: 'W4', y: null}
+            ]
+          },
+          {
+            name: 'Apr',
+            data: [
+              {x: 'W1', y: null},
+              {x: 'W2', y: null},
+              {x: 'W3', y: null},
+              {x: 'W4', y: null}
+            ]
+          },
+          {
+            name: 'May',
+            data: [
+              {x: 'W1', y: null},
+              {x: 'W2', y: null},
+              {x: 'W3', y: null},
+              {x: 'W4', y: null}
+            ]
+          },
+          {
+            name: 'Jun',
+            data: [
+              {x: 'W1', y: null},
+              {x: 'W2', y: null},
+              {x: 'W3', y: null},
+              {x: 'W4', y: null}
+            ]
+          },
+          {
+            name: 'Jul',
+            data: [
+              {x: 'W1', y: null},
+              {x: 'W2', y: null},
+              {x: 'W3', y: null},
+              {x: 'W4', y: null}
+            ]
+          },
+          {
+            name: 'Aug',
+            data: [
+              {x: 'W1', y: null},
+              {x: 'W2', y: null},
+              {x: 'W3', y: null},
+              {x: 'W4', y: null}
+            ]
+          },
+          {
+            name: 'Sep',
+            data: [
+              {x: 'W1', y: null},
+              {x: 'W2', y: null},
+              {x: 'W3', y: null},
+              {x: 'W4', y: null}
+            ]
+          },
+          {
+            name: 'Oct',
+            data: [
+              {x: 'W1', y: null},
+              {x: 'W2', y: null},
+              {x: 'W3', y: null},
+              {x: 'W4', y: null}
+            ]
+          },
+          {
+            name: 'Nov',
+            data: [
+              {x: 'W1', y: null},
+              {x: 'W2', y: null},
+              {x: 'W3', y: null},
+              {x: 'W4', y: null}
+            ]
+          },
+          {
+            name: 'Dec',
+            data: [
+              {x: 'W1', y: null},
+              {x: 'W2', y: null},
+              {x: 'W3', y: null},
+              {x: 'W4', y: null}
+            ]
+          },
+        ],
+          chart: {
+          height: 350,
+          type: 'heatmap',
+        },
+        plotOptions: {
+          heatmap: {
+            enableShades: false,
+            shadeIntensity: 0.9,
+            radius: 5,
+            useFillColorAsStroke: true,
+            colorScale: {
+              ranges: [{
+                  from: 0,
+                  to: 0,
+                  name: 'Нет',
+                  color: '#30544c',
+                },
+                {
+                  from: 1,
+                  to: 5,
+                  name: 'Низкая',
+                  color: '#decb0e'
+                },
+                {
+                  from: 6,
+                  to: 12,
+                  name: 'Средняя',
+                  color: '#5e9c20'
+                },
+                {
+                  from: 13,
+                  to: 20,
+                  name: 'Высокая',
+                  color: '#ffab00'
+                },
+                {
+                  from: 20,
+                  to: 99,
+                  name: 'Аномальная',
+                  color: '#ee0c04'
+                }
+              ]
+            }
           }
+        },
+        dataLabels: {
+          enabled: true
+        },
+        stroke: {
+          width: 1
+        },
+        title: {
+          text: 'Активность Hesoyam II (сделок в неделю 2023)'
+        },
+        legend: {
+          position: "top"
         }
-      },
-      dataLabels: {
-        enabled: true
-      },
-      stroke: {
-        width: 1
-      },
-      title: {
-        text: 'Активность Hesoyam II (сделок в неделю 2023)'
-      },
-      };
+        };
 
-      var chart = new ApexCharts(document.querySelector("#chart"), options);
-      chart.render();
+        var chart = new ApexCharts(document.querySelector("#chart"), options);
+        chart.render();
+      })
 
-    })
+      })
     .catch((err) => console.log(err));
 }
 
