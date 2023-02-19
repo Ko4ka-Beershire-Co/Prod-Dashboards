@@ -354,10 +354,10 @@ function loadData(timeframe) {
           {
             name: 'Feb',
             data: [
-              {x: 'W1', y: null},
-              {x: 'W2', y: null},
-              {x: 'W3', y: null},
-              {x: 'W4', y: null}
+              {x: 'W1', y: data[0]['W5']},
+              {x: 'W2', y: data[0]['W6']},
+              {x: 'W3', y: data[0]['W7']},
+              {x: 'W4', y: data[0]['W8']}
             ]
           },
           {
