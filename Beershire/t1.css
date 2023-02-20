@@ -91,6 +91,21 @@ body {
     /* gap: 1rem; */
 }
 
+.table-heading {
+    text-align: center;
+}
+
+.table-heading:nth-of-type(1) {
+    grid-column: 1 / 2;
+}
+.table-heading:nth-of-type(2) {
+    grid-column: 2 / 3;
+}
+.table-heading:nth-of-type(3) {
+    grid-column: 3 / -1;
+}
+    
+
 .extra-box {
     background-color: var(--backgroundColor);
     padding: 5px;
